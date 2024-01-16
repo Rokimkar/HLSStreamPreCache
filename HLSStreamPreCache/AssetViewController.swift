@@ -124,9 +124,9 @@ extension AssetViewController: AVAssetDownloadDelegate {
         if percentComplete > 0.1 && !downloadCanceledFirstTime{
             downloadCanceledFirstTime = true
             downloadTask.cancel()
-            DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
-                self.downloadTask.resume()
-            })
+//            DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
+//                self.downloadTask.resume()
+//            })
         }
         
         // Start playback when at least 1% is pre-cached
